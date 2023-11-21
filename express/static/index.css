@@ -2,12 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
-body{
-    background-image: url('./images/download.jpeg')  ;
+.img-bg{
+    background-image: url('./images/Blog-Cover.gif')  ;
     opacity:0.75;
   background-repeat: no-repeat;
   background-size: cover;
-
+width:50vw;
+height:50vh;
 }
 
 
@@ -118,6 +119,60 @@ body{
 }
 
 .bg1 p{
-    color:white;
+    color:black;
 }
 
+
+
+/* video */
+/* 
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+body{
+  overflow-x: hidden;
+  font-family: Roboto, sans-serif;
+}
+
+h1{
+  background: rgba(0,0,0,0.5);
+  padding: 10px;
+}
+
+.video-container{
+  width: 100vw;
+  height: 100vh;
+}
+
+ iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80vw;
+  height: 50vh;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+#text{
+  position: absolute;
+  color: #FFFFFF;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-container iframe {
+    height: 56.25vw;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-container iframe {
+    width: 177.78vh;
+  }
+} */
+
+
+.user-img{
+    width:100vw;
+    height:100vh;
+}
