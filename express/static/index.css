@@ -2,13 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
-.img-bg{
-    background-image: url('./images/Blog-Cover.gif')  ;
+body{
+    background-image: url('./images/2b4755b24376af2cf114e9872275c805.jpg')  ;
     opacity:0.75;
   background-repeat: no-repeat;
   background-size: cover;
-width:50vw;
-height:50vh;
+
 }
 
 
@@ -172,7 +171,3 @@ h1{
 } */
 
 
-.user-img{
-    width:100vw;
-    height:100vh;
-}
