@@ -1,10 +1,123 @@
 /* <p style="background-image: url('img_girl.jpg');"> */
-body{
-    background-image: url('./images/depositphotos_71355623-stock-photo-blog-concept-wood-and-rusted.jpg')  ;
-    opacity:0.75;
 
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+body{
+    background-image: url('./images/download.jpeg')  ;
+    opacity:0.75;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 }
 
 
+.wrapper.one {
+    background-color: #1a1a1a;
+}
+.drop-main {
+    display: flex;
+    font-size: 4rem;
+    margin: 1.5rem;
+    justify-content: center;
+    font-family: "Russo One", sans-serif;
+}
+.d {
+    opacity: 0;
+    animation: drop 0.4s linear forwards;
+    animation-duration: 6S;
+    color: #00ffff;
+}
+.r {
+    opacity: 0;
+    animation: drop 0.4s linear forwards 0.9s;
+    color: #99ffff;
+}
+.o {
+    opacity: 0;
+    animation: drop 0.4s linear forwards 0.18s;
+    color: #ccffff;
+}
+.p {
+    opacity: 0;
+    animation: drop 0.4s linear forwards 0.36s;
+    animation-duration: 6S;
+    color: #ffffff;
+}
+.s {
+    opacity: 0;
+    animation: drop 0.4s linear forwards 0.72s;
+    color: #de4040;
+}
+@keyframes drop {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    65% {
+        transform: translateY(-17px);
+        opacity: 1;
+    }
+    75% {
+        transform: translateY(-22px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.wrapper.ten {
+    background-color: #0e2839;
+}
+.bounce {
+    font-size: 3rem;
+    width: 100%;
+    margin: 3rem auto;
+    display: inline-flex;
+    justify-content: center;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, #211e1e2e);
+}
+.bounce span {
+    display: inline-flex;
+    color: #c7f4ff;
+    font-family: "Play", sans-serif;
+    animation: bounce 1s infinite;
+}
+@keyframes bounce {
+    0%,
+    50%,
+    100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-20px);
+    }
+}
+.ten span:nth-of-type(1) {
+    animation-delay: 0.1s;
+}
+.ten span:nth-of-type(2) {
+    animation-delay: 0.2s;
+}
+.ten span:nth-of-type(3) {
+    animation-delay: 0.3s;
+}
+.ten span:nth-of-type(4) {
+    animation-delay: 0.4s;
+}
+.ten span:nth-of-type(5) {
+    animation-delay: 0.5s;
+}
+.ten span:nth-of-type(6) {
+    animation-delay: 0.6s;
+}
+
+.bg1 p{
+    color:white;
+}
 
