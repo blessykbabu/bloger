@@ -14,8 +14,11 @@ const schema = new mongoose.Schema({
     email: {
         type: String,
         required: true
+    },
+
+      profile:{
+        type:String
     }
-    
     
 
 });

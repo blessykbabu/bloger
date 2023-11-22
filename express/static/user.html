@@ -29,9 +29,11 @@
     <textarea class="form-control" placeholder="Create Your Blog.." id="blog" rows="20" cols="150"></textarea>
     <input type="submit" value="add">
 </form>
+<div class="container text-center">
+  <a href="blog.html"><button>My Creations</button></a>
+</div>
 </div>
 
-<div id="demo" ></div>
 
 <script>
     let welcome= document.getElementById("welcome");
@@ -74,34 +76,6 @@
             .catch(error => {
                 console.log(error);
             })
-
-
-
-            fetch("http://localhost:3000/api/get-blog", {
-                method: "get",
-                headers: {
-                    authorization: `Bearer ${token}`
-                }
-            })
-            .then(res => res.json())
-            .then(data => {
-              demo.innerHTML="";
-              console.log(data.msg);
-              if(data.msg){
-                demo.innerHTML =data.msg
-                return;
-              }
-              data.forEach(item=>{
-                let content =
-          `<div><p>${item.blog}</p></div>`;
-        document.getElementById("demo").innerHTML += content;
-
-
-              })
-            })
-          
-            
-
         }
         profile()
     

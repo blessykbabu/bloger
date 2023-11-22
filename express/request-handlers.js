@@ -13,7 +13,7 @@ const { sign } = jwt;
 export async function register(req, res) {
     try {
         let { username, password,email } = req.body;
-        if( username.length < 4 && password.length < 4) {
+        if( username.length <= 4 && password.length <= 4) {
             return res.json("Invalid username or password");
         }
         let hashedPass = await bcrypt.hash(password, 10);

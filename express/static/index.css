@@ -70,10 +70,11 @@
         opacity: 1;
     }
 }
-
+/* 
 .wrapper.ten {
     background-color: #0e2839;
-}
+    
+} */
 .bounce {
     font-size: 3rem;
     width: 100%;
@@ -84,7 +85,7 @@
 }
 .bounce span {
     display: inline-flex;
-    color: #c7f4ff;
+    color: #e03238;
     font-family: "Play", sans-serif;
     animation: bounce 1s infinite;
 }
