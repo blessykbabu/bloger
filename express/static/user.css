@@ -81,3 +81,10 @@ body{
       font-size: 0.7rem;
     }
   }
+
+  #demo{
+    background-image: url('./images/images.jpeg')  ;
+    
+  background-repeat: no-repeat;
+  background-size: cover;
+  }

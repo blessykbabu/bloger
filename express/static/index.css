@@ -2,13 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
-body{
-    background-image: url('./images/2b4755b24376af2cf114e9872275c805.jpg')  ;
+/* body{
+    background-image: url('./images/0b1dd48e87a4ac23a57718fbd74f5f5c.jpg')  ;
     opacity:0.75;
   background-repeat: no-repeat;
   background-size: cover;
 
-}
+} */
 
 
 .wrapper.one {
@@ -16,7 +16,7 @@ body{
 }
 .drop-main {
     display: flex;
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 1.5rem;
     justify-content: center;
     font-family: "Russo One", sans-serif;
