@@ -109,3 +109,13 @@ export async function profile(req, res) {
         res.status(500).send("Error");
     }
 }
+
+export async function  getAll(req,res){
+    try {
+        let blog=await blogSchema.find();
+        return res.json(blog)
+    } catch (error) {
+        console.log(error)
+        return res.status(500).send("error occured")
+    }
+}

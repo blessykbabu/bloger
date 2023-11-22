@@ -105,6 +105,27 @@
    
   </div>
 
+
+  <div class="demo"></div>
+  <script>
+    // let Mname = document.getElementById("Mname");
+    // let about = document.getElementById("data");
+    // let file = document.getElementById("file");
+    fetch("http://localhost:3000/api/get-all")
+      .then((res) => res.json())
+      .then((data) => {
+     
+        console.log(data);
+        data.forEach((item) => {
+          console.log(item);
+          let content =
+            `<div><p>${item.blog}</p></div>`;
+          document.getElementById("demo").innerHTML += content;
+        });
+
+        
+      });
+  </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     
   </body>
