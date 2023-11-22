@@ -82,9 +82,19 @@ body{
     }
   }
 
-  #demo{
-    background-image: url('./images/images.jpeg')  ;
+  
+  .blogs{
+    border: 3px solid green;
+    margin :2rem;
+    text-align: center;
+  
+      background-image: url('./images/images.jpeg')  ;
+      
+    background-repeat: no-repeat;
+    background-size: cover;
     
-  background-repeat: no-repeat;
-  background-size: cover;
+  }
+  .content{
+   
+    margin:2rem;
   }

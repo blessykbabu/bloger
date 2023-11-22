@@ -1,6 +1,23 @@
-body{
+/* body{
     background-color: rgb(227, 159, 134);
   
   background-size: cover;
 
+} */
+
+.blogs{
+  border: 3px solid rgb(153, 120, 59);
+  margin :2rem;
+  text-align: center;
+  /* background-color: rgb(227, 159, 134); */
+  background-image: url('./images/0b1dd48e87a4ac23a57718fbd74f5f5c.jpg');
+     
+background-repeat: no-repeat;
+background-size: cover;
+  
+  
+}
+.content{
+ 
+  margin:2rem;
 }
