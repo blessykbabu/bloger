@@ -2,11 +2,15 @@ import mongoose from "mongoose";
 
 
 const schema = new mongoose.Schema({
-    blog: {
-        type: String
-    },
+  
     userId: {
         type: String
+    },
+      blog: {
+        type: String
+    },
+    myfile:{
+        type:String
     }
 });
 

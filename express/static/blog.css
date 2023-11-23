@@ -10,14 +10,24 @@
   margin :2rem;
   text-align: center;
   /* background-color: rgb(227, 159, 134); */
-  background-image: url('./images/0b1dd48e87a4ac23a57718fbd74f5f5c.jpg');
+  background-image: url('./images/images\ \(1\).jfif');
      
 background-repeat: no-repeat;
 background-size: cover;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
   
 }
 .content{
  
   margin:2rem;
+}
+.content p{
+  white-space:pre-wrap;
+}
+.images{
+  border: 2px solid white;
+  margin: 10px;
 }

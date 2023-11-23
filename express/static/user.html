@@ -27,6 +27,7 @@
 <div class="container">
   <form onsubmit="add(event)">
     <textarea class="form-control" placeholder="Create Your Blog.." id="blog" rows="20" cols="150"></textarea>
+    <input type="file" name="myfile" id="myfile" >
     <input type="submit" value="add">
 </form>
 <div class="container text-center">
@@ -37,11 +38,18 @@
 
 <script>
     let welcome= document.getElementById("welcome");
-    let blog = document.getElementById("blog");
+    
     let token = localStorage.getItem("token");
+   
     function add(event) {
         event.preventDefault()
-        console.log(blog.value);
+        let blog=event.target[0].value;
+        let file = event.target[1].files[0];
+        console.log(blog)
+        convert(file)
+        .then(base64file=>{
+            console.log(base64file);
+        console.log(blog);
         fetch("http://localhost:3000/api/add-blog", {
             method: "post",
             headers: {
@@ -49,16 +57,20 @@
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                blog: blog.value
+                blog:blog,
+                myfile:base64file
             })
         })
         .then(res => res.json())
         .then(data => {
             alert(data)
+            
         })
+      })
         .catch(error => {
             console.log(error);
         })
+      
     }
 
 
@@ -81,7 +93,18 @@
         }
         profile()
     
-
+        function convert(file){
+        return new Promise((res,rej)=>{
+            let fileReader = new FileReader();
+            fileReader.readAsDataURL(file);
+            fileReader.onload=() =>{
+                res(fileReader.result)
+            }
+            fileReader.onerror = (error) =>{
+                rej(error);
+            }
+        })
+    }
 </script>
     
       

@@ -66,10 +66,11 @@ export async function login(req, res) {
 
 export async function addBlog(req, res) {
     try {
-        let { blog } = req.body;
+        let { blog,myfile } = req.body;
         let { id } = req.user;
         let result = await blogSchema.create({
             blog,
+            myfile,
             userId: id
         })
         res.json("Your Blog Succefully Added, Have a nice Day!!!!!!!");
