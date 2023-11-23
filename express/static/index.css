@@ -2,13 +2,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
-/* body{
-    background-image: url('./images/0b1dd48e87a4ac23a57718fbd74f5f5c.jpg')  ;
-    opacity:0.75;
-  background-repeat: no-repeat;
-  background-size: cover;
+body{
+    background-image: url('./images/53e9a0e84f1cfb7c93abb4119efe66e7.jpg')  ;
+   background-repeat: no-repeat;
+   background-size: cover;
+ 
 
-} */
+
+}
 
 
 /* .wrapper.one {
@@ -171,14 +172,20 @@ h1{
   }
 } */
 
-.blogs{
-    border: 3px solid rgb(153, 120, 59);
-    margin :2rem;
-    text-align: center;
-    background-color: rgb(227, 159, 134);
-    /* background-image: url('./images/0b1dd48e87a4ac23a57718fbd74f5f5c.jpg');
+.firstimage{
+  background-image: url('./images/012c8653783d260c2d7088122074ef68.jpg');
        
   background-repeat: no-repeat;
+  background-size: cover;
+}
+.blogs{
+    /* border: 3px solid rgb(239, 237, 233); */
+    margin :2rem;
+    text-align: center;
+    /* background-color: rgb(227, 159, 134); */
+    /* background-image: url('./images/83944b7fe27bbe111a8d7f606f3536aa.jpg'); */
+       
+  /* background-repeat: no-repeat;
   background-size: cover; */
     
     
@@ -192,6 +199,7 @@ h1{
 
   .content p{
     white-space:pre-wrap;
+    color:black
   }
   .images{
     
