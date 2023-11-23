@@ -64,7 +64,7 @@
 					<input class="email" type="email"  id="email" name="email" placeholder="Email" required="">
 					<input class="text" type="password"  id="password" name="password" placeholder="Password" required="">
           <label for="image">Profile Pic</label>
-          <input class="text" type="file"  id="image" name="image">
+          <input class="text" type="file"  id="file" name="file">
           
 					<!-- <input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required=""> -->
 				
@@ -91,23 +91,29 @@
 
 
     <script>
-        let username = document.getElementById("username");
-        let password = document.getElementById("password");
-        let email = document.getElementById("email");
-        let file = event.target[3].files[0];
+        // let username = document.getElementById("username");
+        // let password = document.getElementById("password");
+        // let email = document.getElementById("email");
+        // let file = event.target[3].files[0];
         function register(event) {
             event.preventDefault();
-            
-
+            let username=event.target[0].value;
+            let email=event.target[1].value;
+            let password=event.target[2].value;
+            let file = event.target[3].files[0];
+            convert(file)
+            .then(base64file=>{
+                console.log(base64file);
             fetch(`http://localhost:3000/api/register`, {
                 method: "post",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    username: username.value,
-                    password: password.value,
-                    email:email.value
+                    username: username,
+                    password: password,
+                    email:email,
+                    file:base64file
                     
                 })
             })
@@ -121,6 +127,7 @@
             .then(data=>{
               alert(data)
             })
+          })
             .catch(error => {
                 console.log(error);
             })

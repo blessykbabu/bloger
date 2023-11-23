@@ -12,7 +12,7 @@ const { sign } = jwt;
 
 export async function register(req, res) {
     try {
-        let { username, password,email } = req.body;
+        let { username, password,email,file} = req.body;
         if( username.length <= 4 && password.length <= 4) {
             return res.json("Invalid username or password");
         }
@@ -21,7 +21,7 @@ export async function register(req, res) {
         if(userExist) {
             return res.status(401).send("User already exists");
         }
-        let result = await userSchema.create({ username, password: hashedPass ,email});
+        let result = await userSchema.create({ username, password: hashedPass ,email,file});
         if(result){
             return res.status(200).send("Registration successful!");
         }

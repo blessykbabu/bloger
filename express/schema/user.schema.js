@@ -16,7 +16,7 @@ const schema = new mongoose.Schema({
         required: true
     },
 
-      profile:{
+      file:{
         type:String
     }
     
