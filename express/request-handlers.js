@@ -12,7 +12,7 @@ const { sign } = jwt;
 
 export async function register(req, res) {
     try {
-        let { username, password,email,file} = req.body;
+        let { username, password,email,profile} = req.body;
         if( username.length <= 4 && password.length <= 4) {
             return res.json("Invalid username or password");
         }
@@ -21,7 +21,7 @@ export async function register(req, res) {
         if(userExist) {
             return res.status(401).send("User already exists");
         }
-        let result = await userSchema.create({ username, password: hashedPass ,email,file});
+        let result = await userSchema.create({ username, password: hashedPass ,email,profile});
         if(result){
             return res.status(200).send("Registration successful!");
         }
@@ -96,7 +96,22 @@ export async function  getBlog(req,res){
         return res.status(500).send("Error occured")
     }
 }
+export async function  getProfile(req,res){
+    try{
+        let {id}=req.user;
+        let result=await userSchema.find({_id:id});
+        console.log(result)
+        if(result.length > 0){
+            return res.status(200).send(result)
 
+        }
+        return res.status(200).send({msg:"Your Profile is loading..."})
+    }
+    catch(error){
+        console.log(error)
+        return res.status(500).send("Error occured")
+    }
+}
 export async function profile(req, res) {
     try {
         let user = req.user;

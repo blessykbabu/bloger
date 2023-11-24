@@ -84,17 +84,25 @@ body{
 
   
   .blogs{
-    border: 3px solid green;
-    margin :2rem;
-    text-align: center;
+    /* border: 3px solid green;
   
-      background-image: url('./images/images.jpeg')  ;
+    text-align: center; */
+  
+      /* background-image: url('./images/images.jpeg')  ;
       
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     
   }
   .content{
    
     margin:2rem;
+  }
+
+  .images img{
+    width:50px;
+
+    /* border: 2px solid white; */
+    border-radius: 100%;
+   
   }

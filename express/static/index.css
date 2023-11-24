@@ -219,3 +219,9 @@ h1{
   p {  
    color: darkblue;  
    }  
+
+
+   .footer{
+    /* max-width: 100%; */
+   background-color: black;
+}

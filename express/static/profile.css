@@ -1,0 +1,37 @@
+body{
+    /* background-color: rgb(227, 159, 134); */
+      background-image: url('./images/5aa3bde95aa5434c9deb3ad209ad473d.jpg');
+/*        
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+.blogs{
+    /* border: 3px solid rgb(153, 120, 59); */
+    margin :2rem;
+    text-align: center;
+    background-color:white;
+    opacity: 0.55;
+    width:500px;
+    height: 500px;
+    /* background-image: url('./images/images\ \(1\).jfif');
+       
+  background-repeat: no-repeat;
+  background-size: cover; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    
+  }
+
+.content{
+ 
+    margin:2rem;
+  }
+  .content p{
+    white-space:pre-wrap;
+  }
+  .images img{
+    border: 2px solid white;
+    margin: 10px;
+  }

@@ -13,10 +13,12 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
           <img src="./images/download.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-        
+          <!-- <a href="profile.html"><button style="background-color: aqua; color:rgb(107, 105, 105); border: 0px; padding:10px ;border-radius: 10x;">profile</button></a> -->
         </a>
-        <a href="index.html"><button style="background-color: aqua; color:rgb(107, 105, 105); border: 0px; padding:10px ;border-radius: 10x;">SignOut</button></a>
-      </div>
+        <a href="profile.html"><div id="demo"></div></a>
+      <a href="index.html"><button style="background-color: aqua; color:rgb(107, 105, 105); border: 0px; padding:10px ;border-radius: 10x;">SignOut</button></a>
+      
+    </div>
     </nav>
     
     <div class=" container rotating-text-wrapper">
@@ -40,7 +42,36 @@
     let welcome= document.getElementById("welcome");
     
     let token = localStorage.getItem("token");
-   
+ 
+      fetch("http://localhost:3000/api/get-profile", {
+          method: "get",
+          headers: {
+              authorization: `Bearer ${token}`
+          }
+      })
+      .then(res => res.json())
+      .then(data => {
+        
+        console.log(data.msg);
+        if(data.msg){
+          demo.innerHTML =data.msg
+          return;
+        }
+        data.forEach(item=>{
+          let content =
+              `<div class="blogs">
+                <div class="images"><img src="${item.profile}" />
+            
+              </div>`;
+            document.getElementById("demo").innerHTML += content;
+
+
+
+
+        })
+      })
+
+
     function add(event) {
         event.preventDefault()
         let blog=event.target[0].value;
