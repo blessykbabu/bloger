@@ -26,6 +26,9 @@ background-size: cover;
 }
 .content p{
   white-space:pre-wrap;
+    color:black;
+    width:772px;
+    text-align: justify;
 }
 .images{
   border: 2px solid white;
@@ -33,9 +36,10 @@ background-size: cover;
 }
 
 .pic img {
-  width:50px;
-
-  /* border: 2px solid white; */
-  border-radius: 100%;
- 
+  width:100px;
+  height: 50px;
+  margin: 10px;
+}
+.picture{
+  display: flex;
 }

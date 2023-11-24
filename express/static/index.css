@@ -86,7 +86,7 @@ body{
 }
 .bounce span {
     display: inline-flex;
-    color: #e03238;
+    color: #81373a;
     font-family: "Play", sans-serif;
     animation: bounce 1s infinite;
 }
@@ -195,11 +195,19 @@ h1{
   .content{
  
     margin:2rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    
   }
 
   .content p{
     white-space:pre-wrap;
-    color:black
+    color:black;
+    width:772px;
+    text-align: justify;
+    
+    
   }
   .images{
     

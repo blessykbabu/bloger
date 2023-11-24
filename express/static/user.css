@@ -1,8 +1,8 @@
 body{
-    background-image: url('./images/images\ \(1\).jfif')  ;
+    background-image: url('./images/012c8653783d260c2d7088122074ef68.jpg')  ;
     opacity:0.75;
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-repeat: no-repeat;
+  background-size: cover; */
 
 }
 
@@ -94,15 +94,20 @@ body{
     background-size: cover; */
     
   }
+  .picture{
+    display: flex;
+  }
   .content{
    
     margin:2rem;
   }
 
   .images img{
-    width:50px;
-
+    width:100px;
+    height: 50px;
+    margin: 10px;
     /* border: 2px solid white; */
-    border-radius: 100%;
+   
+   
    
   }
