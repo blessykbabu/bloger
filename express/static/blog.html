@@ -16,6 +16,7 @@
           <img src="./images/download.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
         
         </a>
+        <a href="profile.html"><div id="pic"></div></a>
         <a href="index.html"><button style="background-color: aqua; color:rgb(107, 105, 105); border: 0px; padding:10px ;border-radius: 10x;">SignOut</button></a>
       </div>
     </nav>
@@ -24,6 +25,35 @@
 <div id="demo"></div>
 <script>
   let token = localStorage.getItem("token");
+
+
+  fetch("http://localhost:3000/api/get-profile", {
+          method: "get",
+          headers: {
+              authorization: `Bearer ${token}`
+          }
+      })
+      .then(res => res.json())
+      .then(data => {
+        
+        console.log(data.msg);
+        if(data.msg){
+          demo.innerHTML =data.msg
+          return;
+        }
+        data.forEach(item=>{
+          let content =
+              `<div class="profile">
+                <div class="pic"><img src="${item.profile}" />
+            
+              </div>`;
+            document.getElementById("pic").innerHTML += content;
+
+
+
+
+        })
+      })
  
       fetch("http://localhost:3000/api/get-blog", {
           method: "get",
