@@ -21,7 +21,7 @@
             <a href="blog.html"><button  class="btn btn-warning m-2">My Creations</button></a>
        
 
-           <a href="index.html"><button class="btn btn-info m-2">SignOut</button></a>
+          <button class="btn btn-info m-2" onClick="signout()">SignOut</button>
           </div>
 
     </div>
@@ -48,6 +48,9 @@
     let welcome= document.getElementById("welcome");
     
     let token = localStorage.getItem("token");
+    if(token){
+    
+  
  
       fetch("http://localhost:3000/api/get-profile", {
           method: "get",
@@ -141,6 +144,16 @@
                 rej(error);
             }
         })
+    }
+
+  }
+    else{
+      location.href="http://localhost:3000/login.html"
+    }
+
+    function signout(){
+      localStorage.removeItem("token");
+      location.href="http://localhost:3000/index.html";
     }
 </script>
     
