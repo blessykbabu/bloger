@@ -42,7 +42,7 @@ body{
     }
   }
   .rotating-text-wrapper h2:nth-child(2) {
-    background-color: tomato;
+    background-color: rgb(238, 132, 113);
     animation-name: rotating-text-2;
   }
   @keyframes rotating-text-2 {
