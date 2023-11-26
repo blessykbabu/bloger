@@ -181,30 +181,30 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   }
   
   ::-webkit-input-placeholder {
-    color: #fff;
+    color: black;
     font-weight: 100;
   }
   
   :-moz-placeholder {
     /* Firefox 18- */
-    color: #fff;
+    color:white;
   }
   
   ::-moz-placeholder {
     /* Firefox 19+ */
-    color: #fff;
+    color:white;
   }
   
   :-ms-input-placeholder {
-    color: #fff;
+    color:white;
   }
   
   input[type="submit"] {
     font-size: .9em;
     color: #fff;
-    background: #76b852;
+    background: rgb(47, 24, 24);
     outline: none;
-    border: 1px solid #76b852;
+    border: 1px solid rgb(59, 31, 31);
     cursor: pointer;
     padding: 0.9em;
     -webkit-appearance: none;
@@ -756,7 +756,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   }
 
   body{
-    background-image: url('./images/depositphotos_71355623-stock-photo-blog-concept-wood-and-rusted.jpg')  ;
+    background-image: url('./images/68747470733a2f2f616e73617273686f6d652e66696c65732e776f726470726573732e636f6d2f323032312f30392f64333436346134333531666466333430636362366262333763323831333831612e676966.gif')  ;
     opacity:0.75;
     background-repeat: no-repeat;
     background-size: cover;

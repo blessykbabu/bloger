@@ -86,7 +86,7 @@ body{
 }
 .bounce span {
     display: inline-flex;
-    color: #81373a;
+    color: gray;
     font-family: "Play", sans-serif;
     animation: bounce 1s infinite;
 }

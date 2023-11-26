@@ -1,9 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 body{
     /* background-color: rgb(227, 159, 134); */
       background-image: url('./images/5aa3bde95aa5434c9deb3ad209ad473d.jpg');
 /*        
   background-repeat: no-repeat;
   background-size: cover; */
+  /* font-family: bitter; */
 }
 .blogs{
     /* border: 3px solid rgb(153, 120, 59); */
